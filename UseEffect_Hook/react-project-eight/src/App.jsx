@@ -5,6 +5,9 @@ import './App.css'
 import { useEffect } from 'react'
 import { useRef } from 'react'
 import TimerComponent from './Component/TimeComponent'
+import LoggerComponent from './Component/LoggerComponent'
+import DataFetcher from './Component/DataFetcher'
+import ResizeComponent from './Component/ResizeComponents'
 
 function App() {
 //   const[count,setCount] = useState(0);
@@ -81,7 +84,10 @@ function App() {
 return(
 <div>
   
-    <TimerComponent />
+    {/* <TimerComponent /> */}
+    {/* <LoggerComponent /> */}
+    {/* <DataFetcher /> */}
+    <ResizeComponent />
   
 </div>
 )

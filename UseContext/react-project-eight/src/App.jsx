@@ -22,7 +22,7 @@ function App() {
 <ThemeContext.Provider value={{theme,setTheme}} >
   <div id="wrapperA" style={{backgroundColor:theme ==='light' ? "beige" :"black"}}> 
 
-    <ChildA />
+    <ChildC />
 
   </div>
 

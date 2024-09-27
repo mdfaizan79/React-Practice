@@ -60,7 +60,7 @@ function App() {
   />
   {errors.lastName && <p>{errors.lastName.message}</p>}
 </div>
-        <input type="submit"   
+        <input type="submit"  className='btn' 
         value={isSubmitting ? "Submitting..." : "Submit"}  />
       </form>
     </>

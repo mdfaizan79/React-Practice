@@ -1,0 +1,70 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+/* App Wrapper */
+div {
+  text-align: center;
+}
+
+/* Navbar Styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #81ced1;
+  overflow: hidden;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111;
+}
+
+/* Home, About, Dashboard Page Styling */
+h1 {
+  font-size: 2.5rem;
+  margin-top: 50px;
+  color: #333;
+}
+
+/* Add some padding to all pages */
+.page-container {
+  padding: 20px;
+}
+
+.home, .about, .dashboard {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  width: 80%;
+}
+
+.home {
+  background-color: #e6f7ff;
+}
+
+.about {
+  background-color: #fff5e6;
+}
+
+.dashboard {
+  background-color: #f9e6ff;
+}

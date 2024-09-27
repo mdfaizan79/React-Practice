@@ -1,0 +1,45 @@
+/* App.css */
+
+body {
+  font-family: Arial, sans-serif; /* Font style for the whole application */
+  background-color: #f5f5f5; /* Light background color */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  height: 100vh; /* Full height of the viewport */
+  margin: 0; /* Remove default margin */
+}
+
+.container {
+  background-color: #ffffff; /* White background for the container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px; /* Spacing inside the container */
+  text-align: center; /* Center align text */
+}
+
+h1 {
+  color: #333333; /* Dark gray color for the heading */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+button {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners for buttons */
+  padding: 10px 15px; /* Padding inside the buttons */
+  font-size: 18px; /* Increase button text size */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin: 0 10px; /* Space between buttons */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+p {
+  font-size: 24px; /* Font size for the paragraph */
+  color: #555555; /* Gray color for the paragraph text */
+}

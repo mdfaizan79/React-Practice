@@ -1,6 +1,4 @@
-/* App.css */
 
-/* Styling the container */
 .container {
     display: flex;
     flex-direction: column;
@@ -11,7 +9,7 @@
     font-family: Arial, sans-serif;
   }
   
-  /* Styling the button */
+  
   button {
     background-color: #007bff;
     color: white;
@@ -28,7 +26,7 @@
     background-color: #0056b3;
   }
   
-  /* Styling the input field */
+ 
   input {
     padding: 10px;
     font-size: 16px;
@@ -38,14 +36,14 @@
     width: 200px;
   }
   
-  /* Styling the text */
+
   p, div {
     font-size: 18px;
     color: #333;
     margin-bottom: 10px;
   }
   
-  /* Add some spacing */
+ 
   div {
     margin-top: 10px;
   }

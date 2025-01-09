@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback,useRef, useEffect } from 'react';
 import './index.css'; 
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
   const [charAllow, setCharAllow] = useState(false);
   const [password, setPassword] = useState("");
 
+  const passwordRef = useRef(null);
   const passwordGenerator = useCallback(() => {
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -26,6 +27,17 @@ function App() {
     setPassword(pass);
   }, [length, numAllow, charAllow]);
 
+  const copyPasswordToClipboard = useCallback( () =>{
+    passwordRef.current?.select()
+    passwordRef.current?.setSelectionRange(0,10);
+    window.navigator.clipboard.writeText(password)
+  },[password])
+
+
+  useEffect( () =>{
+    passwordGenerator()
+  },[length, numAllow, charAllow])
+
   return (
     <div className="h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white text-center p-8 rounded-lg shadow-lg gap-4 w-90">
@@ -36,19 +48,21 @@ function App() {
           className="border border-gray-300 p-2 mb-4 w-full" 
           placeholder="Generated Password" 
           readOnly
+          ref={passwordRef}
         />
         <button 
           className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
-          onClick={() => navigator.clipboard.writeText(password)}
+          onClick={copyPasswordToClipboard}
         >
           Copy
         </button>
+
         <div className="mt-8 w-full">
           <label htmlFor="length" className="block text-left mb-2">Length: {length}</label>
           <input 
             type="range" 
             id="length"
-            min="4" 
+            min="8" 
             max="20" 
             value={length} 
             onChange={(e) => setLength(e.target.value)} 
@@ -75,12 +89,12 @@ function App() {
             Character
           </label>
         </div>
-        <button 
+        {/* <button 
           className="bg-green-500 text-white px-4 py-2 rounded-lg mt-4 hover:bg-green-600 w-full"
           onClick={passwordGenerator}
         >
           Generate Password
-        </button>
+        </button> */}
       </div>
     </div>
   );

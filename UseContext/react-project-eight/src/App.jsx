@@ -27,12 +27,6 @@ function App() {
   </div>
 
 </ThemeContext.Provider>
-
-
-
-
-
-
     {/* <UserContext.Provider value={user}>
     <ChildA />
     </UserContext.Provider> */}
